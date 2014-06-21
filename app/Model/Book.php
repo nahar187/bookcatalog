@@ -24,8 +24,6 @@ class Book extends AppModel {
 		)
 	);
 
-
-
 	public $validate = array(
 		'name' => array(
 			'notempty' => array(

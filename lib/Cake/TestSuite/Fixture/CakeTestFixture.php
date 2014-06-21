@@ -191,7 +191,7 @@ class CakeTestFixture {
 		}
 		$this->Schema->build(array($this->table => $this->fields));
 		try {
-			$db->execute($db->createSchema($this->Schema), array('log' => false));
+			$db->execute($db->createSchema($this->Schema), array('log' => true));
 			$this->created[] = $db->configKeyName;
 		} catch (Exception $e) {
 			$msg = __d(

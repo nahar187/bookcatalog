@@ -67,17 +67,17 @@ class DATABASE_CONFIG {
 		'password' => 'pass',
 		'database' => 'cake-habtm',
 		'prefix' => '',
-		//'encoding' => 'utf8',
+		'unix_socket' => '/var/mysql/mysql.sock'
 	);
 
 	public $test = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
+		'host' => '127.0.0.1',
 		'login' => 'user',
-		'password' => 'password',
-		'database' => 'test_database_name',
-		'prefix' => '',
-		//'encoding' => 'utf8',
+		'password' => 'pass',
+		'database' => 'bookcatalog',
+		'unix_socket' => '/var/mysql/mysql.sock',
+		'port' => '8889'
 	);
 }
