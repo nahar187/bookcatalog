@@ -3,7 +3,7 @@
 		<div class="logo"></br>
 			<h1>BookCatalog</h1>
 			<h3 align ='right'>
-				<?php echo $this->Html->link('ログイン', array('controller'=>'users', 'action'=>'login'));?></h3>
+				<?php echo $this->Html->link('Admin login', array('controller'=>'users', 'action'=>'login'));?></h3>
 			</div>
 			<div class="filters">
 				<fieldset>

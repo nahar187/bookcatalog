@@ -5,7 +5,7 @@
 		<?php
 		echo $this->Form->input('name');
 		echo $this->Form->input('isbn');
-		echo $this->Form->input('image');
+		echo $this->Form->input('image', array('readonly'=>true));
 		echo $this->Form->input('Book.Type',array('label'=>'At least one Type', 'type'=>'select', 'multiple'=>true));
 		?>
 	</fieldset>

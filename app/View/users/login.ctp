@@ -4,15 +4,15 @@
 
 <?php echo $this->Form->create('User', array('url'=>'login'));?>
 	<fieldset>
- 		<legend>ログイン</legend>
+ 		<legend>Admin Login</legend>
 		<div class="input required">
-			<label>ユーザ名: *</label>
+			<label>Username: *</label>
 			<?php echo $this->Form->text('User.username'); ?>
 		</div>
 		<div class="input required">
-			<label>パスワード: *</label>
+			<label>Password: *</label>
 			<?php echo $this->Form->password('User.password'); ?>
 		</div>
 	</fieldset>
-<?php echo $this->Form->end('ログイン');?>
+<?php echo $this->Form->end('Login');?>
 </div>

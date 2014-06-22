@@ -39,14 +39,14 @@ $cakeDescription = __d('cake_dev', 'Book Catalog system');
 <body>
 	<div id="container">
 		<div class="header">
-			<h1 align ='right'><?php echo $this->Html->link('トップ', array('controller'=>'books', 'action'=>'index'));?>&nbsp;&nbsp;
+			<h1 align ='right'><?php echo $this->Html->link('Top', '/books/index');?>&nbsp;&nbsp;
 			<?php
 			if($this->Session->check('User')) {
    		// user is logged in, show logout..user menu etc
-      echo $this->Html->link('ログアウト', array('controller'=>'users', 'action'=>'logout'));
+      echo $this->Html->link('Logout', array('controller'=>'users', 'action'=>'logout'));
       } else {
      // the user is not logged in
-     echo $this->Html->link('ログイン', array('controller'=>'users', 'action'=>'login'));
+     echo $this->Html->link('Admin Login', array('controller'=>'users', 'action'=>'login'));
      }
 ?>
 	</h1>

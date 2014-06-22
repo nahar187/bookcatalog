@@ -44,11 +44,7 @@ class BooksController extends AppController {
 	}
 
 	public function admin_view($id = null) {
-		$this->Book->id = $id;
-		if (!$this->Book->exists()) {
-			throw new NotFoundException(__('Invalid book'));
-		}
-		$this->set('book', $this->Book->read(null, $id));
+		$this->view($id);
 	}
 
 	public function admin_add() {
@@ -62,7 +58,7 @@ class BooksController extends AppController {
 			}
 			$this->Book->hasAndBelongsToMany['Author']['unique'] = false;
 			$this->Book->create();
-			$this->Book->validator()->remove('Type');
+			//$this->Book->validator()->remove('Type');
 			if ($this->Book->save($this->request->data)) {
 				$this->Session->setFlash(__('The book has been saved'));
 				return $this->redirect(array('action' => 'index'));
@@ -73,20 +69,6 @@ class BooksController extends AppController {
 		$types = $this->Book->Type->find('list');
 		$this->set(compact('types'));
 
-	}
-
-	public function add_with_validation() {
-		if ($this->request->is('post')) {
-			$this->Book->create();
-			if ($this->Book->save($this->request->data)) {
-				$this->Session->setFlash(__('The book has been saved'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The book could not be saved. Please, try again.'));
-			}
-		}
-		$types = $this->Book->Type->find('list');
-		$this->set(compact('types'));
 	}
 
 	public function admin_edit($id = null) {
@@ -109,7 +91,7 @@ class BooksController extends AppController {
 	}
 
 	public function admin_delete($id = null) {
-		if (!$this->request->is('book')) {
+		if (!$this->request->is('post')) {
 			throw new MethodNotAllowedException();
 		}
 		$this->Book->id = $id;
