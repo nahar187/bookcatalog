@@ -73,7 +73,7 @@ class Book extends AppModel {
 	/**
 	* Upload Directory relative to WWW_ROOT
 	*/
-	public $uploadDir = 'img/uploads';
+	public $uploadDir = '/img/uploads';
 
 	/**
 	* Before Validation Callback

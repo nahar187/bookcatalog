@@ -65,7 +65,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'user',
 		'password' => 'pass',
-		'database' => 'cake-habtm',
+		'database' => 'book-catalog',
 		'prefix' => '',
 		'unix_socket' => '/var/mysql/mysql.sock'
 	);
